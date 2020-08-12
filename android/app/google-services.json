@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "838493563024",
+    "firebase_url": "https://fir-chatapp-d7fa2.firebaseio.com",
+    "project_id": "fir-chatapp-d7fa2",
+    "storage_bucket": "fir-chatapp-d7fa2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838493563024:android:931f2c25c24d75e6985015",
+        "android_client_info": {
+          "package_name": "co.navodsanthana.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838493563024-haddr8smqouogu2ido40bfl0ppqn1mc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrd9Q9lusUxIl7d83c73unBV7ydPkboeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838493563024-haddr8smqouogu2ido40bfl0ppqn1mc1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

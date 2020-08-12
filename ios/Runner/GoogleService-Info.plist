@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>838493563024-0unp69j95qjd37go66adj0jnlhhumkpv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.838493563024-0unp69j95qjd37go66adj0jnlhhumkpv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA8RdlBcLRJcoQsj-YuPAsw18uEzv91BBE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>838493563024</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>co.navodsanthana.flashChat</string>
+	<key>PROJECT_ID</key>
+	<string>fir-chatapp-d7fa2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fir-chatapp-d7fa2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:838493563024:ios:49393e6c4a3a40a1985015</string>
+	<key>DATABASE_URL</key>
+	<string>https://fir-chatapp-d7fa2.firebaseio.com</string>
+</dict>
+</plist>
