@@ -28,12 +28,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
     _controller.forward();
 
-    animation.addStatusListener((status) {
-      print(status);
-    });
-
     _controller.addListener(() {
-      print(_controller.value);
       setState(() {});
     });
   }
@@ -46,40 +41,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    var children2 = <Widget>[
-      Row(
-        children: <Widget>[
-          Hero(
-            tag: 'flash-logo',
-            child: Container(
-              child: Image.asset('images/logo.png'),
-              height: 60.0 * _controller.value,
-            ),
-          ),
-          TypewriterAnimatedTextKit(
-            speed: Duration(milliseconds: 500),
-            text: ['Flash Chat'],
-            textStyle: TextStyle(
-              fontSize: 35.0,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-        ],
-      ),
-      SizedBox(
-        height: 48.0,
-      ),
-      RoundButton(
-        text: 'Log In',
-        color: Colors.lightBlueAccent,
-        function: () => Navigator.pushNamed(context, LoginScreen.ID),
-      ),
-      RoundButton(
-        text: 'Register',
-        color: Colors.blueAccent,
-        function: () => Navigator.pushNamed(context, RegistrationScreen.ID),
-      ),
-    ];
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(_controller.value),
       body: Padding(
@@ -87,7 +48,41 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: children2,
+          children: [
+            Row(
+              children: <Widget>[
+                Hero(
+                  tag: 'flash-logo',
+                  child: Container(
+                    child: Image.asset('images/logo.png'),
+                    height: 60.0 * _controller.value,
+                  ),
+                ),
+                TypewriterAnimatedTextKit(
+                  speed: Duration(milliseconds: 500),
+                  text: ['Flash Chat'],
+                  textStyle: TextStyle(
+                    fontSize: 35.0,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 48.0,
+            ),
+            RoundButton(
+              text: 'Log In',
+              color: Colors.lightBlueAccent,
+              function: () => Navigator.pushNamed(context, LoginScreen.ID),
+            ),
+            RoundButton(
+              text: 'Register',
+              color: Colors.blueAccent,
+              function: () =>
+                  Navigator.pushNamed(context, RegistrationScreen.ID),
+            ),
+          ],
         ),
       ),
     );
