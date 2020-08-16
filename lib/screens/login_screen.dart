@@ -85,7 +85,47 @@ class _LoginScreenState extends State<LoginScreen> {
                     }
                     isScrolling = false;
                   } catch (e) {
-                    print(e);
+                    return showDialog(
+                      barrierDismissible: false,
+                      context: context,
+                      builder: (_) => AlertDialog(
+                        title: Center(
+                          child: Text('Login error'),
+                        ),
+                        content: SingleChildScrollView(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ListBody(
+                                children: [
+                                  Text(
+                                    'The email or the password you entered does not match!',
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              FlatButton(
+                                onPressed: () {
+                                  isScrolling = false;
+                                  Navigator.of(context).pop();
+                                  setState(() {});
+                                },
+                                child: Text(
+                                  'OK',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                color: Colors.lightBlueAccent,
+                              ),
+                            ],
+                          ),
+                        ),
+                        elevation: 10,
+                      ),
+                    );
                   }
                 },
               ),

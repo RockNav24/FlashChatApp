@@ -82,7 +82,28 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     }
                     isScrolling = false;
                   } catch (e) {
-                    print(e);
+                    return showDialog(
+                      barrierDismissible: false,
+                      context: context,
+                      builder: (_) => AlertDialog(
+                        title: Text('Registration error'),
+                        content: SingleChildScrollView(
+                          child: ListBody(
+                            children: [
+                              Text('Sorry your account hasn\'t been created!')
+                            ],
+                          ),
+                        ),
+                        actions: [
+                          FlatButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text('Ok'),
+                          ),
+                        ],
+                      ),
+                    );
                   }
                 },
               ),

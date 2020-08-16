@@ -16,11 +16,10 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   final _auth = FirebaseAuth.instance;
-
   String message;
-
   final textContoler = TextEditingController();
 
+  // Send button toggle widget
   Widget sendButtonToggle() {
     if (message == null || message.isEmpty) {
       return SizedBox.shrink();
@@ -51,10 +50,28 @@ class _ChatScreenState extends State<ChatScreen> {
 
       if (user != null) {
         loggedInUser = user;
-        print(loggedInUser.email);
       }
     } catch (e) {
-      print(e);
+      return showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (_) => AlertDialog(
+          title: Text('Registration error'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: [Text('Sorry your account hasn\'t been created!')],
+            ),
+          ),
+          actions: [
+            FlatButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('Ok'),
+            ),
+          ],
+        ),
+      );
     }
   }
 
@@ -71,6 +88,12 @@ class _ChatScreenState extends State<ChatScreen> {
   //     }
   //   }
   // }
+
+  @override
+  void dispose() {
+    super.dispose();
+    textContoler.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
